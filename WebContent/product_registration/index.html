@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>product_registration</title>
+</head>
+<body>
+  <header>
+    <div class="back">
+      <a href="../items_management/index.html">
+    <span class="sankaku"></span>
+  </a>
+  </div>
+    商品登録
+    <a href="../index.html" class="logout">ログアウト</a>
+  </header>
+  <ul class="menu">
+    <li><a href="../items_management/index.html">商品</a></li>
+    <li><a href="../order_list/index.html">注文</a></li>
+  </ul>
+
+<!---=========================== header =====================================-->
+
+  <main>
+    <form action="GET">
+      <section class="product_name">
+        <ul>
+          <li>
+            <h2>商品名</h2>
+            <input type="text">
+          </li>
+          <li>
+            <h2>カテゴリー</h2>
+            <input type="text">
+          </li>
+        </ul>
+      </section>
+      <section class="color">
+        <h2>カラー</h2>
+        <ul>
+          <li>
+            <input type="checkbox">
+            <div class="brown"></div>
+          </li>
+          <li>
+            <input type="checkbox">
+            <div class="gray"></div>
+          </li>
+          <li>
+            <input type="checkbox">
+            <div class="black"></div>
+          </li>
+          <li>
+            <input type="checkbox">
+            <div class="purple"></div>
+          </li>
+          <li>
+            <input type="checkbox">
+            <div class="indigo"></div>
+          </li>
+          <li>
+            <input type="checkbox">
+            <div class="dimgray"></div>
+          </li>
+          <li>
+            <input type="checkbox">
+            <div class="red"></div>
+          </li>
+        </ul>
+      </section>
+      <section class="price">
+        <h2>価格　　　　　</h2>
+        <input type="number">
+      </section>
+      <section class="inventory_change">
+        <h2>初期在庫数　　</h2>
+        <input type="number">
+      </section>
+      <section class="detail">
+        <h2>写真・商品説明</h2>
+        <ul>
+          <li>
+            <input type="file" class="file">
+          </li>
+          <li>
+            <textarea name="text" id="text" cols="30" rows="10" class="text"></textarea>
+          </li>
+        </ul>
+      </section>
+      <div class="btns">
+        <button type="button" class="cancel">キャンセル</button>
+        <button type="reset" class="deletion">削除</button>
+        <button type="submit" class="registration">登録</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
