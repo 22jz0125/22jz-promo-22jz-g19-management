@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/product_detail.js" defer></script>
   <title>product_detail</title>
 </head>
 <body>
@@ -29,11 +30,11 @@
         <ul>
           <li>
             <h2>商品名</h2>
-            <input type="text">
+            <input type="text" id="name">
           </li>
           <li>
             <h2>カテゴリー</h2>
-            <input type="text">
+            <input type="text" id="category">
           </li>
         </ul>
       </section>
@@ -72,7 +73,7 @@
       </section>
       <section class="price">
         <h2>価格　　　　　</h2>
-        <input type="number">
+        <input type="number" id="price">
       </section>
       <section class="inventory_change">
         <h2>在庫変動　　　</h2>
@@ -85,7 +86,7 @@
             <input type="file" class="file">
           </li>
           <li>
-            <textarea name="text" id="text" cols="30" rows="10" class="text"></textarea>
+            <textarea name="description" id="description" cols="30" rows="10" class="text"></textarea>
           </li>
         </ul>
       </section>

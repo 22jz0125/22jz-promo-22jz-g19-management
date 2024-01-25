@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<script src="../assets/js/item.js" defer></script>
     <title>items_management</title>
 	<meta name="description" content="sikaku">
 </head>
@@ -14,7 +15,7 @@
 			<span class="sankaku"></span>
 		</a>
     </div>
-    商品登録
+    商品一覧
 		<div>
 			<a href="../product_registration/index.html" class="items_registration">商品登録</a>
 			<a href="../index.html" class="logout">ログアウト</a>
@@ -36,7 +37,7 @@
 				<input type="text" >
 			</form>
 		</div>
-		<ul class="item_list">
+		<ul class="item_list"  id="first_item">
 			<li>
 				<ul id="element_name">
 					<li>カテゴリー</li>
@@ -45,7 +46,7 @@
 					<li>仕入予定日</li>
 				</ul>
 			</li>
-			<li>
+			<!-- <li>
 				<a href="../product_detail/index.html">
 					<ul>
 						<li>category</li>
@@ -204,7 +205,7 @@
 						<li>purchase_expected_date</li>
 					</ul>
 				</a>
-			</li>
+			</li> -->
 		</ul>
 	</main>
 
