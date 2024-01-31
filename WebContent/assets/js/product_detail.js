@@ -8,12 +8,12 @@
     const elPrice = document.querySelector('#price');
     const elCategory = document.querySelector('#category');
     const elDescription = document.querySelector('#description');
-  
+
 
     window.addEventListener('load', () => {
         fetch(`/22jz-promo-22jz-g19-management/ItemList?id=${id}`)
-          .then(res => res.json())
-          .then(data => {
+        .then(res => res.json())
+        .then(data => {
             console.log(data);
             console.log(data[0].name);
             let category;
@@ -43,7 +43,7 @@
             elPrice.value = data[0].price;
             elCategory.value = category;
             elDescription.value = data[0].description;
-          });
-      });
+        });
+    });
 
 })();

@@ -15,16 +15,17 @@
       <img src="assets/img/kv.png" alt="鍵マーク">
     </figure>
     <form action="GET" class="login">
-      <div>
+      <div class="login_div">
         <label for="#">メールアドレス</label>
         <input type="text" id="email">
       </div>
-      <div>
+      <div class="login_div">
         <label for="#">パスワード</label>
         <input type="text" id="password">
       </div>
       <button type="button" id="login_btn">ログイン</button>
-      <a href="/22jz-promo-22jz-g19-management/create_user">新規作成する</a>
+      <div class="login_err">メールアドレス又はパスワードに誤りがあります</div>
+      <a href="/22jz-promo-22jz-g19-management/create_user" class="create_user_link">新規作成する</a>
     </form>
   </main>
 </body>

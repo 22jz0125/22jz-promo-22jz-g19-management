@@ -4,6 +4,7 @@
   const email = document.querySelector("#email"); // IDセレクタを使用
   const password = document.querySelector("#password"); // IDセレクタを使用
   const login = document.querySelector('#login_btn');
+  const login_err = document.querySelector('.login_err');
 
   login.addEventListener('click', (e) => {
     sendData();
@@ -41,6 +42,9 @@
         } else {
           console.error('通信エラーが発生しました。');
         }
+      }
+      else {
+        login_err.classList.add('active');
       }
     };
   }

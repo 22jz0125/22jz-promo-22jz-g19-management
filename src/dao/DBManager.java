@@ -25,8 +25,8 @@ public class DBManager {
 	 */
 	private DBManager() {
 		try {
-//			Class.forName("com.mysql.jdbc.Driver");
-			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Class.forName("com.mysql.jdbc.Driver");
+//			Class.forName("oracle.jdbc.driver.OracleDriver");
 		}
 		catch(ClassNotFoundException e) {
 			System.out.println("JDBCドライバのロードに失敗しました : " + e);
@@ -47,8 +47,8 @@ public class DBManager {
 	 * コネクションを取得
 	 */
 	protected Connection getConnection() throws SQLException {
-		return DriverManager.getConnection(CN_STRING, USER, PASS);
+//		return DriverManager.getConnection(CN_STRING, USER, PASS);
 //		return DriverManager.getConnection(CN2_STRING, USER2, PASS2);
-//		return DriverManager.getConnection(CNX_STRING, USERX, PASSX);
+		return DriverManager.getConnection(CNX_STRING, USERX, PASSX);
 	}
 }
