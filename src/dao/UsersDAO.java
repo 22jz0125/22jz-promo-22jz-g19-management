@@ -13,11 +13,32 @@ import org.mindrot.jbcrypt.BCrypt;
 import model.Users;
 
 public class UsersDAO {
+	 public List<Users> getGeneralUser(){ 
+		 List<Users> list = new ArrayList<>(); //Itemオブジェクトを格納するための新しいArrayListを作成
+		 DBManager manager = DBManager.getInstance();
+		 try(Connection cn = manager.getConnection()){
+			 String sql = "SELECT * FROM users ORDER BY id";
+			 PreparedStatement stmt = cn.prepareStatement(sql);
+			 ResultSet rs = stmt.executeQuery();
+//			 System.out.println(rs);
+			 //リストに格納
+			 while(rs.next()) {
+				 Users users = rs2model(rs);
+				 list.add(users);
+			 }	 
+		 }catch(SQLException e) {
+			 e.printStackTrace();
+		 }		System.out.println(list);
+		 
+		 return list;
+		 
+	 }
+	
 	 public List<Users> get(){ 
 		 List<Users> list = new ArrayList<>(); //Itemオブジェクトを格納するための新しいArrayListを作成
 		 DBManager manager = DBManager.getInstance();
 		 try(Connection cn = manager.getConnection()){
-			 String sql = "SELECT * FROM users";
+			 String sql = "SELECT * FROM admin_users";
 			 PreparedStatement stmt = cn.prepareStatement(sql);
 			 ResultSet rs = stmt.executeQuery();
 //			 System.out.println(rs);
@@ -38,7 +59,7 @@ public class UsersDAO {
 			DBManager manager = DBManager.getInstance();
 			try(Connection cn = manager.getConnection()) {
 				// プレースホルダで変数部分を定義
-				String sql = "SELECT * FROM users WHERE id = ?";
+				String sql = "SELECT * FROM admin_users WHERE id = ?";
 				PreparedStatement stmt = cn.prepareStatement(sql);
 				stmt.setInt(1, id);
 				ResultSet rs = stmt.executeQuery();
@@ -64,7 +85,7 @@ public class UsersDAO {
 	    DBManager manager = DBManager.getInstance();
 	    try(Connection cn = manager.getConnection()) {
 	        // プレースホルダで変数部分を定義
-	        String sql = "SELECT * FROM users WHERE email = ?";
+	        String sql = "SELECT * FROM admin_users WHERE email = ?";
 	        PreparedStatement stmt = cn.prepareStatement(sql);
 	        stmt.setString(1, email);
 	        ResultSet rs = stmt.executeQuery();
@@ -99,7 +120,7 @@ public class UsersDAO {
 	 	   String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
 	        
 	        // プレースホルダで変数部分を定義
-	        String sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
+	        String sql = "INSERT INTO admin_users (name, email, password) VALUES (?, ?, ?)";
 	        PreparedStatement stmt = cn.prepareStatement(sql);
 	        stmt.setString(1, name);
 	        stmt.setString(2, email);

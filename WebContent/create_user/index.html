@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/management_login.js" defer></script>
+  <link rel="stylesheet" href="/22jz-promo-22jz-g19-management/assets/css/style.css">
+  <script src="/22jz-promo-22jz-g19-management/assets/js/management_create_user.js" defer></script>
   <title>management</title>
 </head>
+
 <body>
-  <header class="top_header">ログイン</header>
+  <header class="top_header">新規作成</header>
   <main>
-    <figure  class="kv">
-      <img src="assets/img/kv.png" alt="鍵マーク">
-    </figure>
     <form action="GET" class="login">
+      <div>
+        <label for="#">名前</label>
+        <input type="text" id="name">
+      </div>
       <div>
         <label for="#">メールアドレス</label>
         <input type="text" id="email">
@@ -23,9 +25,9 @@
         <label for="#">パスワード</label>
         <input type="text" id="password">
       </div>
-      <button type="button" id="login_btn">ログイン</button>
-      <a href="/22jz-promo-22jz-g19-management/create_user">新規作成する</a>
+      <button type="button" id="create_btn">新規作成</button>
     </form>
   </main>
 </body>
+
 </html>
