@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/management_login.js" defer></script>
   <title>management</title>
 </head>
 <body>
@@ -16,14 +17,13 @@
     <form action="GET" class="login">
       <div>
         <label for="#">メールアドレス</label>
-        <input type="text">
+        <input type="text" id="email">
       </div>
       <div>
         <label for="#">パスワード</label>
-        <input type="text">
+        <input type="text" id="password">
       </div>
-      <!-- <button type="submit">ログイン</button> -->
-      <button type="submit"><a href="order_list/index.html">ログイン</a></button>
+      <button type="button" id="login_btn">ログイン</a></button>
     </form>
   </main>
 </body>
