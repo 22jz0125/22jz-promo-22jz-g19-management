@@ -8,10 +8,10 @@
     location.href = `/22jz-promo-22jz-g19-management/index.html`;
   }
 
-  elLogout.addEventListener('click', () =>{
-    sessionStorage.removeItem('user_id');
-    location.href = `/22jz-promo-22jz-g19-management/`;
-  });
+  // elLogout.addEventListener('click', () =>{
+  //   sessionStorage.removeItem('user_id');
+  //   location.href = `/22jz-promo-22jz-g19-management/`;
+  // });
 
   fetch(`/22jz-promo-22jz-g19-management/M_UserList`)
     .then(res => res.json())
